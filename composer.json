@@ -1,0 +1,31 @@
+{
+    "name": "trask/world-cup-cli",
+    "description": "cli application for the 2018 world cup",
+    "type": "project",
+    "require": {
+        "symfony/console": "^4.1",
+        "twilio/sdk": "^5.19",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "matt trask",
+            "email": "mjftrask@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Trask\\WorldCup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trask\\WorldCup\\Tests\\": "tests/"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/../vendor/autoload.php';
+
+use GuzzleHttp\Client;
+use Symfony\Component\Console\Application;
+use Trask\WorldCup\Commands\MatchDayCommand;
+use Trask\WorldCup\Commands\TeamCommand;
+
+$client = new Client();
+
+$teamCommand = new TeamCommand($client);
+$matchDayComment = new MatchDayCommand($client);
+
+$app = new Application();
+$app->add($teamCommand);
+$app->add($matchDayComment);
+$app->setName('World Cup 2018 CLI');
+
+$app->run();
